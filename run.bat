@@ -32,15 +32,15 @@ if '%errorlevel%' NEQ '0' (
 cecho {CF}Downloading the software from the server.txt file{#}{\n}
 wget.exe -N -P Downloaded --content-disposition -i server.txt -q --show-progress
 
-cecho {CF}Being installed with silent mode{#}{\n}
+cecho {CF}Silent mode{#}{\n}
 
 for %%a in (Downloaded\*.msi) do (
-echo Installing the program from %%a
+echo Installing %%a
 msiexec /i %~dp0%%a /qn
 cecho {0A}    Successful{#}{\n}
 )
 
-cecho {CF}Being installed with manual mode{#}{\n}
+cecho {CF}Manual mode{#}{\n}
 for %%a in (Downloaded\*.exe) do (
 echo Installing %%a
 %~dp0%%a
