@@ -15,7 +15,7 @@ Automatic Install Software for Windows
 - If you want to install the old version or another execute file. You can put that in the folder `Downloaded`.
 
 # Image
-![](https://i.imgur.com/LXMPrA3.png)
+![](https://i.imgur.com/NHc4EBD.png)
 
 # Q&A
 **What is silent mode and manual mode?**
