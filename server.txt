@@ -1,0 +1,4 @@
+https://www.7-zip.org/a/7z2201-x64.msi
+https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B90F3C091-8F65-DA2B-AA97-82EC83A9FB9E%7D%26lang%3Den%26browser%3D3%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_0%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi
+https://github.com/audacity/audacity/releases/download/Audacity-3.1.3/audacity-win-3.1.3-64bit.exe
+https://downloads.gonitro.com/professional_13.67.0.45/en/retail/nitro_pro13_ba_x64.msi
