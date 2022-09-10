@@ -41,3 +41,6 @@ Automatic Install Software for Windows
 - You can create the script for your purpose. I make the script for general purposes for any person can use.
 
 Another question? ==> Create an issue.
+
+# License
+[MIT](https://github.com/itlvd/auto-install-software/blob/main/LICENSE)
