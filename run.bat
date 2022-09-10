@@ -29,23 +29,22 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------   
 
-cecho {CF}Downloading the Software from server file{#}{\n}
+cecho {CF}Downloading the software from the server.txt file{#}{\n}
 wget.exe -N -P Downloaded --content-disposition -i server.txt -q --show-progress
 
-
-cecho {CF}Silent Installing{#}{\n}
+cecho {CF}Being installed with silent mode{#}{\n}
 
 for %%a in (Downloaded\*.msi) do (
-echo Installing %%a
+echo Installing the program from %%a
 msiexec /i %~dp0%%a /qn
-cecho {0A}    Successfull{#}{\n}
+cecho {0A}    Successful{#}{\n}
 )
 
-cecho {CF}Manual Installing{#}{\n}
+cecho {CF}Being installed with manual mode{#}{\n}
 for %%a in (Downloaded\*.exe) do (
 echo Installing %%a
 %~dp0%%a
-cecho {0A}    Successfull{#}{\n})
+cecho {0A}    Successful{#}{\n})
 
 cecho {9F} Done {#}{\n}
 pause
