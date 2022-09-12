@@ -35,16 +35,26 @@ wget.exe -N -P Downloaded --content-disposition -i server.txt -q --show-progress
 cecho {CF}Silent mode{#}{\n}
 
 for %%a in (Downloaded\*.msi) do (
-echo Installing %%a
-msiexec /i %~dp0%%a /qn
-cecho {0A}    Successful{#}{\n}
+	echo Installing %%a
+	msiexec /i %~dp0%%a /qn /l*v msi.log
+
+	if "%errorlevel%" == "0" (cecho {0A}    Done{#}{\n}) else (goto err)
+
 )
 
 cecho {CF}Manual mode{#}{\n}
 for %%a in (Downloaded\*.exe) do (
-echo Installing %%a
-%~dp0%%a
-cecho {0A}    Successful{#}{\n})
+	echo Installing %%a
+	start /wait %~dp0%%a
 
-cecho {9F} Done {#}{\n}
+	if "%errorlevel%" == "0" (cecho {0A}    Done{#}{\n}) else (goto err)
+)
+
+cecho {9F} Successful {#}{\n}
+goto END
+
+:err
+echo "Error : %errorlevel%"
+
+:END
 pause
